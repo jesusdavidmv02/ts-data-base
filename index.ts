@@ -1,7 +1,7 @@
-import { ProductoRepository } from "./src/infrastructure/producto-repositori";
 import { Producto } from "./src/domain/model/modelo.producto";
 import { Categoria } from "./src/domain/model/modelo.categoria";
-import { CategoriaRepository } from "./src/infrastructure/categoria-repositori";
+import { ProductoRepository } from "./src/infrastructure/repositori/producto-repositori";
+import { CategoriaRepository } from "./src/infrastructure/repositori/categoria-repositori";
 
 console.log("Sistema de pedidos");
 
