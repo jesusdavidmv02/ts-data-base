@@ -27,7 +27,7 @@ const categoria = new Categoria({
 });
 
 const cliente = new Clientes({
-  dni: "05",
+  dni: "02",
   nombre: "Jesus david Mendoaza",
   clave : "xxxxxx",
   correo : "jesusdavidmv02@gmail.com"

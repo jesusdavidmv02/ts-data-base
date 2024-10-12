@@ -10,8 +10,13 @@ export class ClienteRepository {
         const querySql = `INSERT INTO clientes (dni,nombre, clave, correo) VALUES (?,?,?,?)`;
         const values = [cliente.dni, cliente.nombre, cliente.clave , cliente.correo];
     
-        const result = await connection.query(querySql, values);
-        return result;
+        try {
+            const result = await connection.query(querySql, values); 
+            return result;
+        } catch (error) {
+            console.error("Error "+ error);
+        } 
+
     }
 
     async obtenerClientes(){

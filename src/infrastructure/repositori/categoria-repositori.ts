@@ -14,17 +14,8 @@ export class CategoriaRepository {
         const querySql = `INSERT INTO categorias (id,nombre, descripcion) VALUES (?,?,?)`;
         const values = [categoria.id, categoria.nombre, categoria.descripcion];
     
-        //const result = await connection.query(querySql, values);
-       // return result;
-
-        connection.query(querySql, values)
-        .then((result) => {
-            return result
-        })
-        .catch((error) => {
-            console.error('Error  : ', error);
-        });
-
+        const result = await connection.query(querySql, values);
+        return result;
     }
 
     async obtenerCategorias(){

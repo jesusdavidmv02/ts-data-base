@@ -1,3 +1,4 @@
+import { error } from "console";
 import { Clientes } from "../../domain/model/modelo.cliente";
 import { ClienteRepository } from "../repositori/cliente-repositori";
 
@@ -9,11 +10,16 @@ export class clienteController {
         this.repository = new ClienteRepository();     
     }
 
-    async agregar (index : {dni : string ; nombre : string  ; clave : string ; correo : string }) {
-        const cliente = new Clientes({dni: index.dni,  nombre : index.nombre , clave: index.clave , correo : index.correo})
-        const result = await this.repository.agregarCliente(cliente);
-        console.log("cliente agregado correcatmente ");
-        return result;
+    agregar (index : {dni : string ; nombre : string  ; clave : string ; correo : string }) {
+      const cliente = new Clientes({dni: index.dni,  nombre : index.nombre , clave: index.clave , correo : index.correo})
+      
+      this.repository.agregarCliente(cliente).then(rta => {
+         console.log("Cliente agregado correctamente : ")
+         return rta;
+      }).catch(error => {
+        console.error('El error #%d' + error)
+      })
+      
     }
 
     async obtener() {
@@ -29,8 +35,5 @@ export class clienteController {
         console.log(result);
         return result;
       }
-    
-
-
-    
+      
 }
