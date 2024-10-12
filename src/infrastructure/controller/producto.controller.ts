@@ -1,5 +1,5 @@
 import { Producto } from "../../domain/model/modelo.producto";
-import { ProductoRepository } from "../producto-repositori";
+import { ProductoRepository } from "../repositori/producto-repositori";
 
 
 

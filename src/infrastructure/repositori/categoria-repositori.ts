@@ -1,6 +1,7 @@
 import { Pool, RowDataPacket } from "mysql2/promise";
-import { Categoria } from "../domain/model/modelo.categoria";
-import { getPoolConnection } from "../../DB/Source";
+import { Categoria } from "../../domain/model/modelo.categoria";
+import { getPoolConnection } from "../../../DB/Source";
+
 
 
 

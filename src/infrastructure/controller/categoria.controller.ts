@@ -1,5 +1,5 @@
 import { Categoria } from "../../domain/model/modelo.categoria";
-import { CategoriaRepository } from "../categoria-repositori";
+import { CategoriaRepository } from "../repositori/categoria-repositori";
 
 
 
@@ -11,18 +11,10 @@ export class CategoriaController {
     this.repository = new CategoriaRepository();
   }
 
-  async agregar(payload: {
-    id : string;
-    nombre: string;
-    descripcion: string;
-  }) {
-    const producto = new Categoria({
-      id:payload.id,
-      nombre: payload.nombre,
-      descripcion: payload.descripcion
-    });
-    const result = await this.repository.agregarCategoria(producto);
-    console.log("Producto agregado");
+  async agregar(payload: { id : string; nombre: string;  descripcion: string; }) {
+    const categoria = new Categoria({ id:payload.id, nombre: payload.nombre, descripcion: payload.descripcion });
+    const result = await this.repository.agregarCategoria(categoria);
+    console.log("categoria agregado");
     return result;
   }
 

@@ -1,4 +1,4 @@
-export class cliente {
+export class Clientes {
 
     dni : string =  ""; 
     nombre :string = "";

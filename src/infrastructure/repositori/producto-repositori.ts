@@ -1,8 +1,7 @@
 import { ResultSetHeader, RowDataPacket } from "mysql2";
-;
 import { Pool } from "mysql2/promise";
-import { Producto } from "../domain/model/modelo.producto";
-import { getPoolConnection } from "../../DB/Source";
+import { Producto } from "../../domain/model/modelo.producto";
+import { getPoolConnection } from "../../../DB/Source";
 
 
 
