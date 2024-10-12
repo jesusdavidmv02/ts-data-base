@@ -1,4 +1,3 @@
-import { error } from "console";
 import { Clientes } from "../../domain/model/modelo.cliente";
 import { ClienteRepository } from "../repositori/cliente-repositori";
 

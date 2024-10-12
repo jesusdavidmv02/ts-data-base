@@ -1,8 +1,6 @@
 import { Categoria } from "../../domain/model/modelo.categoria";
 import { CategoriaRepository } from "../repositori/categoria-repositori";
 
-
-
 export class CategoriaController {
   private repository: CategoriaRepository;
 

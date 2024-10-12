@@ -3,10 +3,7 @@ import { Pool } from "mysql2/promise";
 import { Producto } from "../../domain/model/modelo.producto";
 import { getPoolConnection } from "../../../DB/Source";
 
-
-
 export class ProductoRepository {
-
 
   async agregarProducto(producto: Producto) {
     // Acceso a la base de datos
